@@ -15,7 +15,7 @@ public class TableModel extends AbstractTableModel{
 	private static final long serialVersionUID = -7994541583917709662L;
 	private List<Pelicula> datos;
 	private List<String> columnas;
-	private Comparator<Pelicula>comparadorId=new Comparator<Pelicula>();
+	private Comparator<Pelicula>comparadorId;
 	
 	public TableModel() {
 		datos = new ArrayList<>();
