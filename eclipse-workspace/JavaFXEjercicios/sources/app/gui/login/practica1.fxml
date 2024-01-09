@@ -5,11 +5,18 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.login.LoginController">
    <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Desktop/real-betis-estrena-identidad-visual.jpg" />
+         </image>
+      </ImageView>
       <Button layoutX="216.0" layoutY="256.0" mnemonicParsing="false" onAction="#log" text="Aceptar" />
       <Button layoutX="323.0" layoutY="256.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="57.0" text="Salir" />
       <TextField fx:id="nombreUsuario" layoutX="226.0" layoutY="132.0" promptText="Indique su nombre">
