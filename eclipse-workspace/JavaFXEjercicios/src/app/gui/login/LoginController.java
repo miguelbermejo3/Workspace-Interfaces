@@ -3,6 +3,7 @@ package app.gui.login;
 import java.text.SimpleDateFormat;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -20,34 +21,59 @@ public class LoginController {
 
 	@FXML
 	private Label valido;
-	
+
 	@FXML
 	private Label acceso;
+
+	@FXML
+	private Button boton;
+
+	public void initialize() {
+		boton.setDisable(true);
+
+	}
 
 	public void log() {
 
 		LoginService lg = new LoginService();
-		SimpleDateFormat sdf= new SimpleDateFormat("dd/MM/yy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
 		try {
 
 			Usuario u = lg.login(nombreUsuario.getText(), pass.getText());
 
-			
-			valido.setText(u.getNombre()+"--"+sdf.format(u.getFechaRegistro()));
+			valido.setText(u.getNombre() + "--" + sdf.format(u.getFechaRegistro()));
 			acceso.setText("Acceso correcto");
-			
-			nombreUsuario.setText("");
-			pass.setText("");
+
+			vaciarCampos();
+
+			boton.setDisable(true);
 
 		} catch (LoginDenegadoException e) {
 			acceso.setText("Acceso Denegado");
 			valido.setText("");
-			
+			vaciarCampos();
+
 		}
 
 	}
-	
+
 	public void exit() {
-	System.exit(0);	
+		System.exit(0);
+	}
+
+	@FXML
+	public void handleTextChange() {
+
+		boolean camposNoVacios = !nombreUsuario.getText().isEmpty() && !pass.getText().isEmpty();
+		boton.setDisable(camposNoVacios);
+	}
+
+	public void actualizarEstadoBoton() {
+		boton.setDisable(nombreUsuario.getText().trim().isEmpty() || pass.getText().isEmpty());
+	}
+
+	public void vaciarCampos() {
+		nombreUsuario.setText("");
+		pass.setText("");
 	}
 }
