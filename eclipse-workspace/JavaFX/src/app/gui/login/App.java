@@ -1,5 +1,6 @@
 package app.gui.login;
 
+import app.gui.controller.AppController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,12 +10,12 @@ public class App extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		//1. cargar el fxml
-		FXMLLoader loader= new FXMLLoader(App.class.getResource("/app/gui/login/login.fxml"));
-		//creamos la escena
-		Scene scene= new Scene(loader.load());
-		//cargar la escena en el escenario
-		primaryStage.setScene(scene);
+		
+		AppController appController= new AppController(primaryStage);
+		
+		appController.cambiarVista("/app/gui/login/login.fxml");
+		
+		
 		//mostrar escenario
 		primaryStage.show();
 	}

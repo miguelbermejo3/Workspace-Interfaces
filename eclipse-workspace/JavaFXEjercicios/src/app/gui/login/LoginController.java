@@ -2,6 +2,8 @@ package app.gui.login;
 
 import java.text.SimpleDateFormat;
 
+import app.gui.appController.AppController;
+import app.gui.bienvenida.BienvenidaController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,7 +13,7 @@ import modelo.Usuario;
 import services.LoginDenegadoException;
 import services.LoginService;
 
-public class LoginController {
+public class LoginController extends AppController {
 
 	@FXML
 	private TextField nombreUsuario;
@@ -44,9 +46,14 @@ public class LoginController {
 			valido.setText(u.getNombre() + "--" + sdf.format(u.getFechaRegistro()));
 			acceso.setText("Acceso correcto");
 
+			String nombreUser=nombreUsuario.getText();
+			BienvenidaController bienvenidaController= (BienvenidaController) cambiarVista(AppController.FXML_BIENVENIDA);
+			bienvenidaController.setNombreBienvenida(nombreUser);
+			
 			vaciarCampos();
 
 			boton.setDisable(true);
+			
 
 		} catch (LoginDenegadoException e) {
 			acceso.setText("Acceso Denegado");
@@ -60,6 +67,8 @@ public class LoginController {
 	public void exit() {
 		System.exit(0);
 	}
+	
+	
 
 	@FXML
 	public void handleTextChange() {
