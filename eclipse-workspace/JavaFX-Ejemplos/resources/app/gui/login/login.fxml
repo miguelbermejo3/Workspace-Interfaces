@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="600.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.login.LoginController">
+   <children>
+      <Button layoutX="274.0" layoutY="255.0" mnemonicParsing="false" onAction="#escribirTexto" text="Aceptar" textFill="#ff1a1a">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.800000011920929" green="0.17777778208255768" blue="0.17777778208255768" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <TextField fx:id="tfNombre" layoutX="226.0" layoutY="166.0" promptText="Indica tu nombre..." />
+      <TextField id="campo-verde" layoutX="183.0" layoutY="105.0" promptText="hola que pasa" />
+      <TextField layoutX="376.0" layoutY="49.0" />
+   </children>
+</AnchorPane>

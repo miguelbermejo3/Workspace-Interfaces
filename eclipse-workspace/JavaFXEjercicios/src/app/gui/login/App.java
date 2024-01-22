@@ -11,7 +11,7 @@ public class App extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		AppController appController= new AppController(primaryStage);
-				appController.cambiarVista("/app/gui/bienvenida/bienvenida.fxml");
+				appController.cambiarVista("/app/gui/login/practica1.fxml");
 				//mostrar escenario
 				primaryStage.show();
 				

@@ -1,0 +1,9 @@
+.text-field {
+	-fx-background-color: blue;
+}
+.text-field:hover {
+	-fx-background-color: red;
+}
+.text-field:focused {
+	-fx-background-color: green;
+}
