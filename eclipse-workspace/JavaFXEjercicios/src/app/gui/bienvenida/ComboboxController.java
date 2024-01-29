@@ -36,7 +36,7 @@ public class ComboboxController extends AppController {
 	@FXML
 	void limpiarTextos(ActionEvent event) {
 
-		comBox.setValue("");
+		comBox.getSelectionModel().clearSelection();
 		textFieldNombres.setText("");
 	}
 

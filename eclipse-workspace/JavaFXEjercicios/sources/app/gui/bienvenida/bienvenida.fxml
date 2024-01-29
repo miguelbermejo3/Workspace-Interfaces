@@ -17,6 +17,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#cargarPantallaDatePicker" text="DatePicker" />
                   <MenuItem mnemonicParsing="false" onAction="#cargarPantallaColorPicker" text="ColorPicker" />
                   <MenuItem mnemonicParsing="false" onAction="#cargarPantallaSlider" text="Slider" />
+                  <MenuItem mnemonicParsing="false" onAction="#cargarPantallaWeb" text="WebViewer" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="App">

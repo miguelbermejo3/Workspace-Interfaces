@@ -1,27 +1,21 @@
-package app.gui.appController;
+package app;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
 
-import app.gui.login.App;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class AppController implements Initializable {
+public class AppController {
 
 	public static Stage primaryStage;
-	public static final String FXML_LOGIN = "/app/gui/login/practica1.fxml";
-	public static final String FXML_BIENVENIDA = "/app/gui/bienvenida/bienvenida.fxml";
-	public static final String FXML_COMBOBOX = "/app/gui/bienvenida/combobox.fxml";
-	public static final String FXML_SLIDER = "/app/gui/bienvenida/slider.fxml";
-	public static final String FXML_DATEPICKER = "/app/gui/bienvenida/datepicker.fxml";
-	public static final String FXML_COLORPICKER = "/app/gui/bienvenida/colorpicker.fxml";
-	public static final String FXML_WebViewer = "/app/gui/bienvenida/webviewer.fxml";
-
+	public static final String FXML_PANTALLA1 = "/app/pantalla1/pantalla1.fxml";
+	public static final String FXML_PANTALLA2="/app/pantalla2/pantalla2.fxml";
+	public static final String FXML_PANTALLA3="/app/pantalla2/pantalla3.fxml";
+	
+	
 	public AppController() {
 
 	}
@@ -29,7 +23,10 @@ public class AppController implements Initializable {
 	public AppController(Stage stage) {
 		primaryStage = stage;
 	}
-
+	
+	
+	
+	
 	public AppController cambiarVista(String fxml) {
 		try {
 			// 1. cargar el fxml
@@ -57,10 +54,7 @@ public class AppController implements Initializable {
 			throw new RuntimeException("No se ha podido cargar fxml");
 		}
 	}
-
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-
-	}
+	
+	
 
 }

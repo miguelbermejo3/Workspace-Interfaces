@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.bienvenida.WebviewerController">
+   <children>
+      <WebView fx:id="viewer" layoutX="46.0" layoutY="147.0" prefHeight="200.0" prefWidth="525.0" />
+      <TextField fx:id="textWeb" layoutX="279.0" layoutY="97.0" />
+      <Label fx:id="lblWeb" layoutX="116.0" layoutY="101.0" text="Introduzca la Página Web:" />
+      <Button fx:id="botonWeb" layoutX="458.0" layoutY="97.0" mnemonicParsing="false" onAction="#cargarPagina" text="ACEPTAR" />
+   </children>
+</AnchorPane>

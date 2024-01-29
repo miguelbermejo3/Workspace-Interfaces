@@ -57,7 +57,11 @@ public class BienvenidaController extends AppController {
     	borderPane.setCenter(vista);
     }
     
-    
+    @FXML
+    void cargarPantallaWeb(ActionEvent event) {
+    	Parent vista=cargarVista(AppController.FXML_WebViewer);
+    	borderPane.setCenter(vista);
+    }
     
     
     
