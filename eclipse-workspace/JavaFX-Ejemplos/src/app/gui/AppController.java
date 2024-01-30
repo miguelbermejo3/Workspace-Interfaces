@@ -1,6 +1,8 @@
 package app.gui;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,7 +23,27 @@ public class AppController {
 	
 	public AppController(Stage primaryStage) {
 		stage = primaryStage;
+		
+		stage.setUserData(new HashMap<String,Object>());
 	}
+	
+	public Object getUserDataObject(String key) {
+		Map<String,Object>map =(Map<String,Object>) stage.getUserData();
+		
+		
+		return map.get(key);
+	}
+	
+	public Object putUserDataObject(String key) {
+		Map<String,Object>map =(Map<String,Object>) stage.getUserData();
+		
+		
+		return map.get(key);
+	}
+	
+	
+	
+	
 	
 	public AppController cambiarVista(String fxml) {
 		try {

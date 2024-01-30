@@ -59,6 +59,11 @@ public class Pantalla1Controller extends AppController {
 		try {
 			AnimalesService as = new AnimalesService();
 			List<Animal> animales = as.consultarAnimales(txtfieldTipo.getText());
+			
+			
+			
+			
+			
 			datos.setAll(animales);
 
 		} catch (AnimalesNotFoundException e) {

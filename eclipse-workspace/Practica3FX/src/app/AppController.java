@@ -2,6 +2,8 @@ package app;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +12,7 @@ import javafx.stage.Stage;
 
 public class AppController {
 
-	public static Stage primaryStage;
+	public static Stage stage;
 	public static final String FXML_PANTALLA1 = "/app/pantalla1/pantalla1.fxml";
 	public static final String FXML_PANTALLA2="/app/pantalla2/pantalla2.fxml";
 	public static final String FXML_PANTALLA3="/app/pantalla2/pantalla3.fxml";
@@ -20,8 +22,25 @@ public class AppController {
 
 	}
 
-	public AppController(Stage stage) {
-		primaryStage = stage;
+	public AppController(Stage primaryStage) {
+		stage=primaryStage  ;
+		stage.setUserData(new HashMap<String,Object>());
+		
+		
+		
+		
+	}
+	
+	public Object getUserDataObject(String key) {
+		@SuppressWarnings("unchecked")
+		Map<String,Object>userData=(Map<String,Object>) stage.getUserData();
+		return userData.get(key);
+	}
+	
+	public void setUserDataObject(String key,Object data) {
+		@SuppressWarnings("unchecked")
+		Map<String,Object>userData=(Map<String,Object>) stage.getUserData();
+		userData.put(key, data);
 	}
 	
 	
@@ -35,7 +54,7 @@ public class AppController {
 			Scene scene;
 			scene = new Scene(loader.load());
 			// cargar la escena en el escenario
-			primaryStage.setScene(scene);
+			stage.setScene(scene);
 			return loader.getController();
 		} catch (IOException e) {
 			System.err.println("No se ha podido cambiar de vista");

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,5 +16,6 @@
         </columns>
       </TableView>
       <Button fx:id="btnConsulta" layoutX="274.0" layoutY="327.0" mnemonicParsing="false" onAction="#consultarPersona" text="CONSULTAR" />
+      <ProgressBar fx:id="progeso" layoutX="74.0" layoutY="53.0" prefWidth="200.0" progress="0.0" />
    </children>
 </AnchorPane>

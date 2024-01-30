@@ -1,6 +1,7 @@
 package app.controller;
 
 import app.AppController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -22,6 +23,25 @@ public class Pantalla3Controller extends AppController {
 
     @FXML
     private TextField txtfieldEdad;
+    
+    
+    
+    @FXML
+    void guardarNuevoAnimal(ActionEvent event) {
+
+    	Pantalla1Controller p1c = (Pantalla1Controller) cambiarVista(AppController.FXML_PANTALLA1);
+    
+    	setUserDataObject("nombre",textfieldNombre.getText());
+    	setUserDataObject("edad",txtfieldEdad.getText());
+//    System.out.println(getUserDataObject("tipo"));
+//    System.out.println(getUserDataObject("edad"));
+    System.out.println(getUserDataObject("tipo"));	
+    }
+    
+    
+    
+    
+    
     
     
     
