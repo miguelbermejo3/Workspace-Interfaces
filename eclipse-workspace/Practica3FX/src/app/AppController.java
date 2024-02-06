@@ -14,38 +14,31 @@ public class AppController {
 
 	public static Stage stage;
 	public static final String FXML_PANTALLA1 = "/app/pantalla1/pantalla1.fxml";
-	public static final String FXML_PANTALLA2="/app/pantalla2/pantalla2.fxml";
-	public static final String FXML_PANTALLA3="/app/pantalla2/pantalla3.fxml";
-	
-	
+	public static final String FXML_PANTALLA2 = "/app/pantalla2/pantalla2.fxml";
+	public static final String FXML_PANTALLA3 = "/app/pantalla2/pantalla3.fxml";
+
 	public AppController() {
 
 	}
 
 	public AppController(Stage primaryStage) {
-		stage=primaryStage  ;
-		stage.setUserData(new HashMap<String,Object>());
-		
-		
-		
-		
+		stage = primaryStage;
+		stage.setUserData(new HashMap<String, Object>());
+
 	}
-	
+
 	public Object getUserDataObject(String key) {
 		@SuppressWarnings("unchecked")
-		Map<String,Object>userData=(Map<String,Object>) stage.getUserData();
+		Map<String, Object> userData = (Map<String, Object>) stage.getUserData();
 		return userData.get(key);
 	}
-	
-	public void setUserDataObject(String key,Object data) {
+
+	public void setUserDataObject(String key, Object data) {
 		@SuppressWarnings("unchecked")
-		Map<String,Object>userData=(Map<String,Object>) stage.getUserData();
+		Map<String, Object> userData = (Map<String, Object>) stage.getUserData();
 		userData.put(key, data);
 	}
-	
-	
-	
-	
+
 	public AppController cambiarVista(String fxml) {
 		try {
 			// 1. cargar el fxml
@@ -73,7 +66,5 @@ public class AppController {
 			throw new RuntimeException("No se ha podido cargar fxml");
 		}
 	}
-	
-	
 
 }

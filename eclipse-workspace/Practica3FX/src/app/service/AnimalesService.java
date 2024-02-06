@@ -28,11 +28,11 @@ public class AnimalesService {
 	
 	
 	public List<Animal> consultarAnimales(String tipo) throws AnimalesNotFoundException{
-//		try {
-//			Thread.sleep(3000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		if (tipo != null && tipo.isEmpty()) {
 			return animales;
 		}

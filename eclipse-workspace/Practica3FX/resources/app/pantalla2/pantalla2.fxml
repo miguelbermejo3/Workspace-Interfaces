@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.Pantalla2Controller">
+<AnchorPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.Pantalla2Controller">
    <children>
       <Label fx:id="lblTipo" layoutX="131.0" layoutY="154.0" text="Tipo: " />
       <Button fx:id="btnContinuar" layoutX="244.0" layoutY="249.0" mnemonicParsing="false" onAction="#irPantalla3" text="CONTINUAR" />
       <TextField fx:id="txtfieldTipo" layoutX="170.0" layoutY="150.0" prefHeight="25.0" prefWidth="280.0" />
+      <CheckBox fx:id="modoOscuro" layoutX="484.0" layoutY="31.0" mnemonicParsing="false" text="Modo OScuro" />
    </children>
 </AnchorPane>
